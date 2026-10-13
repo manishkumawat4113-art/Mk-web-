@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 16px;
+  font-family: Arial, sans-serif;
+  background: #f2f4f7;
+}
+
+h2 {
+  text-align: center;
+}
+
+.controls {
+  margin: 15px 0;
+}
+
+#box {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+#mainImg {
+  display: block;
+  width: 100%;
+  height: auto;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+#marker {
+  display: none;
+  position: absolute;
+  border: 2px solid #00aaff;
+  background: rgba(0, 170, 255, 0.18);
+  cursor: move;
+  touch-action: none;
+}
+
+.handle {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: #007bff;
+  touch-action: none;
+}
+
+.tl {
+  top: -7px;
+  left: -7px;
+  cursor: nwse-resize;
+}
+
+.tr {
+  top: -7px;
+  right: -7px;
+  cursor: nesw-resize;
+}
+
+.bl {
+  bottom: -7px;
+  left: -7px;
+  cursor: nesw-resize;
+}
+
+.br {
+  bottom: -7px;
+  right: -7px;
+  cursor: nwse-resize;
+}
+
+#output {
+  padding: 12px;
+  min-height: 70px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  background: #1e1e1e;
+  color: #8cff8c;
+  border-radius: 8px;
+}
+
+button {
+  padding: 10px 16px;
+  margin: 5px 5px 5px 0;
+  border: none;
+  border-radius: 6px;
+  background: #007bff;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+
