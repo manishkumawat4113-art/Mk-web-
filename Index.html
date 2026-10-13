@@ -1,119 +1,46 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Hello, World!</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-        <div id="screen1">
-        <h1>MK CHAT 💬</h1>
-        <h2>Welcome Back</h2>
-        <input id="loginEmail" type="text" placeholder="📧 Email"></input>
-        <input id="loginPassword"type="password" placeholder="🔒 Password"></input>
-        <button id="loginBtn">Login</button>
-        <h3 id="newaccount">Don't have account?</h3>
-    </div>
-    
-    <div id="newAccountScreen">
-         <p id="close">x</p>
-        <input id="username"type="text" placeholder="Name"></input>
-    <input id="email" type="text" placeholder="📧 Email"></input>
-    <input id="password" type="password" placeholder="🔒 Password"></input>
-    <input id="confirmPassword" type="password" placeholder="Confirm Password"></input>   
-        <button id="createAccount">Create Account</button>
-    </div>
-    
-    
-    <div id="homeScreen">
-        <h2>MK CHAT 💬</h2>
-        <h3 id="userName"></h3>
-        <input id="searchInput"type="search" placeholder="🔍 Search....">
-        <div id="searchResult"></div>
-         <h1 id="h1">:</h1>
-        <div id="chatList"></div>
-        <div id="setting">
-          <h4 id="profile">Profile</h4>
-          <h4 id="darkmode">dark mode</h4>
-         <h4 id="notification">notification</h4>
-         <h4>wallpaper</h4>
-         <h4 id="logout">logout</h4>
-         </div>
-         </div> 
-         
- <div id="profileScreen">
-          <h2 id="profileName"></h2>
-          <button id="profileScreenClose">←</button>
-          <p id="profileEmail"></p>
-          <p id="profileBio"></p>
-          
-          <button id="editProfile">Edit Profile</button>
-    
-  </div>     
-          
-   <!-- <div id="notificationScreen">
-          <h2>Notifications</h2>
-          <button id="closeNotification">← Back</button>
-          <div id="notificationList"></div>
-          </div> -->
-    
-<div id="chatScreen">
-    <div id="chatHeader">
-        <button id="backBtn">←</button>
-        <h3
-    id="chatUserName"></h3>
-        <p id="chatStatus">Offline</p>
-        <button id="chatMenuBtn">⋮</button>
-    </div>
-    <div id="chatsetting">
-       <h4>block</h4>
-       <h4 id="clearChatBtn">clear chat</h4>     
-    </div>
-    <div id="messages">
-    </div>
-    <div id="replyPreview">
-       <div>
-        <strong>Replying to</strong>
-        <p id="replyText"></p>
-        </div>
-        <button id="cancelReply">✕</button>
-    </div>
-    <div id="chatInput">
-         <input id="messageInput"type="text"
-         placeholder="Type message...">
-         <button id="sendBtn">➤</button>
-    </div>
-    <div id="messageMenu">
-          <h4 id="deleteMessageOption">🗑️ Delete</h4>
-          <h4 id="copyMessage">📋 Copy</h4>
-          <h4 id="replyMessage">↩️ Reply</h4>
-          <h4 id="editMessage">✍️ Edit</h4>
-          <h4 id="forwardMessage">↖️Forward</h4>
-    </div>
-    
-<div id="forwardModal"class="forwardModal">
-    <div class="forwardBox">
-    <div class="forwardHeader">
-    <button id="closeForwardModal">←</button>
-    <h3>Forward Message</h3>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MK Image Area Selector</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h2>MK Image Area Selector</h2>
+
+ <div class="controls">
+  <label>Select image from phone:</label>
+  <input type="file" id="imageInput" accept="image/*">
+
+  <p>Or paste image URL from Chrome:</p>
+
+  <input
+    type="url"
+    id="imageUrl"
+    placeholder="Paste image URL here"
+  >
+
+  <button id="loadUrlBtn">Load Image</button>
 </div>
 
-<input type="text"id="forwardSearchInput"
-         placeholder="Search users..."</input>
+  <div id="box">
+    <img id="mainImg" alt="Your image">
+    <div id="marker">
+      <span class="handle tl"></span>
+      <span class="handle tr"></span>
+      <span class="handle bl"></span>
+      <span class="handle br"></span>
+    </div>
+  </div>
 
-<p id="forwardSelectedCount">0 selected</p>
+  <h3>Generated CSS</h3>
+  <pre id="output">Image load karke area select karo.</pre>
 
- <div id="forwardUsersList"></div>
- 
- <button id="confirmForwardBtn"disabled>
-      Forward</button>
+  <button id="copyBtn">Copy CSS</button>
+  <button id="resetBtn">Reset</button>
 
-</div>
-</div>
-</div>
-<script src="error-monitor.js"></script>
-    
-<script src="https://unpkg.com/socket.io-client@4.8.1/dist/socket.io.min.js"></script>
-<script src="./script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
